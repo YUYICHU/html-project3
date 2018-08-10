@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<head>
+    <title>The New Fitness Cookbook</title>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script> 
+    <style>
+        body {  
+            font-family: helvetica, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        div{
+            height: 200px;
+            /* background: url("http://port-cafe.ru/images/gallery/bluda/bluda2017_006.jpg"); */
+            background-size: cover;
+            position: relative;
+            border-radius: 12px;
+            margin: 20px;
+        }
+
+        .first{
+            background: url("https://cdn.cdkitchen.com/images/cats/94/cat-94-720-1.jpg");
+        }
+        .second{
+            background: url("https://imagesvc.timeincapp.com/v3/mm/image?url=https%3A%2F%2Fimg1.coastalliving.timeinc.net%2Fsites%2Fdefault%2Ffiles%2Fstyles%2F4_3_horizontal_inbody_900x506%2Fpublic%2Fimage%2F2016%2F01%2Fmain%2Fpineapple-pork-chops-4010002.jpg%3Fitok%3DZATIZXd3&w=700&q=85");
+        }
+        .third{
+            background: url("https://i.ndtvimg.com/i/2016-11/curd-rice_620x350_71479882252.jpg");
+        }
+
+        p{
+            color: rgba(255, 255, 255, 1);
+            background-color: rgba(0, 0, 0, 1);
+            /* gradient漸層 */
+            background: linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, .4));
+            background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, .4));
+            background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, .4));
+            background: -o-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, .4));
+            padding: 18px;
+            text-align: justify;
+            line-height: 25px;
+            position: absolute;
+            bottom: 0;
+            margin: 0;
+            width: auto;
+            height: 50px;
+        }
+        .price{
+            float: right;
+        }
+        h1{
+            font-family: 'Righteous', cursive;
+            text-align: center;
+        }
+        h2{
+            text-align: center;
+            margin: -20px 0 30px 0;
+        }
+        small{
+            opacity: 0;
+        }
+        .show-description p {
+            height: 70px;
+        }
+        .show-description small{
+            opacity: 1;
+        }
+
+        @media (max-width:500px){
+            h2{
+                font-size: 20px;
+                margin: -20px 0 20px 0;
+            }
+            div{
+                margin: 20px 12px 20px 12px;
+            }
+            p{
+                font-size: 18px;
+                padding: 15px;
+                line-height: 20px;
+            }
+            small{
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>The New Fitness Cookbook</h1>
+    <h2>Fresh & whole food recipes</h2>
+
+    <div class="first">
+        <p>
+            Amuse bouche <span class="price">$1</span><br>
+            <small>
+                ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </small> 
+        </p>
+    </div>    
+
+    <div class="second">
+    <!-- <div class="second" style="background: url('https://i.ndtvimg.com/i/2016-11/curd-rice_620x350_71479882252.jpg')"> 
+         
+        1.先從高等級進行比較，高等級相同時，再比較低等級的，以此類推，
+        2.完全相同的話，就採用 後者優先原則（也就是樣式覆蓋），
+        3.有 !important 時，無條件絕對優先
+     -->
+        <p>
+            Tagliatelle al pomodoro <span class="price">$8</span><br>
+            <small>
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </small>
+        </p>
+    </div>
+    
+    <div class="third">
+        <p>
+            Salmon with zucchini <span class="price">$15</span>$15<br>
+            <small>
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </small>
+        </p>
+    </div>
+
+    <script>
+        $('div').on('click', function(){
+            $(this).toggleClass('show-description');
+            // 點擊div show-description就會on/off
+        });
+        
+    </script>
+
+</body>
